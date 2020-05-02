@@ -5,7 +5,7 @@
   <p><span class="film-key">Rating: </span>{{film.rating}}  </p>
   <p><span class="film-key">Release Date: </span>{{film.releaseDate}}  </p>
   <p><span class="film-key">Running time: </span>{{film.runtime}}   </p>
-<film-details v-if="selectedFilm" class ="film-key" :selectedFilm="selectedFilm" :film="film"></film-details>
+<film-details v-if="selectedFilm" class ="film-key" :film="film"></film-details>
   <button type="button" class="action-btn" v-on:click="deleteMovie">Delete</button>
   <button type="button" class="action-btn" v-on:click="selectFilm">Show Details</button>
 </div>
