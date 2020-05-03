@@ -26,7 +26,7 @@ export default {
   methods: {
     deleteMovie(){
       MoviesService.deleteMovie(this.film._id)
-      .then(() => eventBus.$emit("film-deleted", this.film_id))
+      .then(() => eventBus.$emit("film-deleted", this.film._id))
     },
 
     selectFilm() {
