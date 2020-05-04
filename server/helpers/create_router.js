@@ -30,6 +30,10 @@ const createRouter = function (collection){
     const id = ObjectID(req.params.id);
     collection.findOne({_id: id})
     .then(doc => res.json(doc))
+    .catch((error) =>{
+      console.error(error);//log me the error
+      res.status(500)//show this error on the browser
+      res.json({error: error})
   });
 
   //delete a specific one using the ID
@@ -37,6 +41,10 @@ const createRouter = function (collection){
     const id = ObjectID(req.params.id);
     collection.deleteOne({_id: id})
     .then(doc => res.json(doc))
+    .catch((error) =>{
+      console.error(error);//log me the error
+      res.status(500)//show this error on the browser
+      res.json({error: error})
   })
   return router;
 };
