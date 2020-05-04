@@ -34,7 +34,7 @@ const createRouter = function (collection){
       console.error(error);//log me the error
       res.status(500)//show this error on the browser
       res.json({error: error})
-  });
+  })});
 
   //delete a specific one using the ID
   router.delete('/:id', function(req,res){
@@ -45,7 +45,7 @@ const createRouter = function (collection){
       console.error(error);//log me the error
       res.status(500)//show this error on the browser
       res.json({error: error})
-  })
+  })})
   return router;
 };
 
